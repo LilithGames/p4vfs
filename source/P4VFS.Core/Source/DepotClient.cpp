@@ -336,7 +336,8 @@ public:
 			else if (strstr(fileType.c_str(), "utf16"))
 				charSet = CharSetApi::UTF_16_LE;
 			else if (strstr(fileType.c_str(), "unicode"))
-				charSet = CharSetApi::UTF_16_LE;
+				// charSet = CharSetApi::UTF_16_LE;
+				charSet = CharSetApi::NOCONV;
 		}
 
 		if (charSet == CharSetApi::CSLOOKUP_ERROR)
