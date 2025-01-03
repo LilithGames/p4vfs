@@ -178,6 +178,7 @@ DepotOperations::SyncVirtual(
 				{
 					AutoMutex resultslock(params.m_ResultsMutex);
 					params.m_Results->push_back(modification);
+					SettingManager::StaticInstance().CurrentSyncProgress.SetValue(static_cast<int32_t>(params.m_Results->size()));
 				}
 
 				if (SyncVirtualModification(modification, params) == false)
