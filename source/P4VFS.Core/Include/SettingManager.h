@@ -32,6 +32,7 @@ namespace FileCore {
 		_N( int32_t,  GarbageCollectPeriodMs,          5*60*1000 ) \
 		_N( int32_t,  DepotClientCacheIdleTimeoutMs,   5*60*1000 ) \
 		_N( int32_t,  CurrentSyncProgress,             0 ) \
+		_N( String,   Version,                         L"1.28.2.0-1" ) \
 
 
 	class SettingManager;
