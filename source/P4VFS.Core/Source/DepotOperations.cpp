@@ -166,6 +166,7 @@ DepotOperations::SyncVirtual(
 		size_t maxThreads = size_t(std::max(1, SettingManager::StaticInstance().MaxSyncConnections.GetValue()));
 		FSyncVirtualModificationParams params(log, depotClient, resultModifications);
 
+		SettingManager::StaticInstance().CurrentSyncTotal.SetValue(static_cast<int32_t>(modifications->size()));
 		ThreadPool::ForEach::ExecuteImpersonated(
 			maxThreads, 
 			modifications->data(), 
